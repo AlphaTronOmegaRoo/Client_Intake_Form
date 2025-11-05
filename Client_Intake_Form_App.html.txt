@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Intake Form</title>
+    <!-- 1. Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 3. Custom Tailwind Config -->
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'brand-blue': '#00C9FF',
+            'brand-green': '#92FE9D',
+            'gray-900': '#111827',
+            'gray-700': '#374151',
+            'gray-500': '#6B7280',
+            'gray-100': '#F3F4F6',
+            'gray-50': '#F9FAFB',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+            'serif': ['DM Serif Display', 'serif'],
+          }
+        }
+      }
+    }
+    </script>
+</head>
+<body class="font-sans bg-gray-50 antialiased">
+
+    <div class="container mx-auto max-w-2xl px-4 py-16 sm:py-24">
+        
+        <!-- Header -->
+        <header class="text-center">
+            <h1 class="font-serif text-4xl font-bold text-gray-900 sm:text-5xl">
+                Let's Start Your Project's Adventure
+            </h1>
+            <p class="mt-4 text-lg text-gray-500">
+                This guided intake will help us get a crystal-clear vision of your project. Take your time, have fun, and let's build something amazing together.
+            </p>
+        </header>
+
+        <!-- Progress -->
+        <div class="mt-10">
+            <div class="flex justify-between text-sm font-medium text-gray-600">
+                <span>Basics</span>
+                <span>Vision</span>
+                <span>Vibe</span>
+            </div>
+            <div class="mt-2 h-2 w-full rounded-full bg-gray-200 overflow-hidden">
+                <div id="progressBar" class="h-2 w-1/3 rounded-full bg-gradient-to-r from-brand-blue to-brand-green transition-all duration-300"></div>
+            </div>
+        </div>
+
+        <!-- 
+          FORM INSTRUCTIONS:
+          1. Go to Formspree.io and create a new form.
+          2. Copy your unique Formspree URL.
+          3. Replace "YOUR_UNIQUE_ID" in the 'action' URL below.
+          4. Drag this file to Netlify.com to deploy it and get your link.
+        -->
+        <form 
+          id="intakeForm"
+          action="https://formspree.io/f/YOUR_UNIQUE_ID" 
+          method="POST"
+          class="mt-16"
+          novalidate
+        >
+            <!-- Formspree helpers -->
+            <input type="hidden" name="_subject" value="New Project Intake Submission">
+            <!-- Optional: set your own thank-you URL once deployed -->
+            <!-- <input type="hidden" name="_redirect" value="https://your-site.com/thanks"> -->
+            <!-- Honeypot (spam protection) -->
+            <input type="text" name="bot_field" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+            <div class="space-y-12">
+
+                <!-- 
+                  STEP 1: THE BASICS
+                -->
+                <section data-step="1" class="bg-white shadow-xl rounded-lg p-8 sm:p-12">
+                    <h2 class="font-serif text-3xl font-bold text-gray-900">
+                        Step 1: The Basics 🚀
+                    </h2>
+                    <p class="mt-3 text-base text-gray-500">
+                        Let's start with who you are. This is just so I know who to send the project confirmation to.
+                    </p>
+                    <div class="mt-8 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-6">
+                        <div>
+                            <label for="client_name" class="block text-sm font-medium text-gray-700">Your Name</label>
+                            <input type="text" name="client_name" id="client_name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring-brand-blue sm:text-sm p-3">
+                        </div>
+                        <div>
+                            <label for="client_email" class="block text-sm font-medium text-gray-700">Your Best Email</label>
+                            <input type="email" name="client_email" id="client_email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring-brand-blue sm:text-sm p-3">
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 
+                  STEP 2: THE VISION
+                -->
+                <section data-step="2" class="bg-white shadow-xl rounded-lg p-8 sm:p-12 hidden">
+                    <h2 class="font-serif text-3xl font-bold text-gray-900">
+                        Step 2: The Vision 💡
+                    </h2>
+                    <p class="mt-3 text-base text-gray-500">
+                        This is the most important part. Tell me everything about your idea. There are no wrong answers!
+                    </p>
+                    <div class="mt-8 space-y-8">
+                        <div>
+                            <label for="project_name" class="block text-sm font-medium text-gray-700">What's your project's name?</label>
+                            <p class="text-sm text-gray-500">Even a temporary codename is perfect for now.</p>
+                            <input type="text" name="project_name" id="project_name" required class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring-brand-blue sm:text-sm p-3">
+                        </div>
+                        
+                        <div>
+                            <label for="target_audience" class="block text-sm font-medium text-gray-700">Who are we building this for?</label>
+                            <p class="text-sm text-gray-500">Try to paint a picture of your ideal customer. (e.g., "Freelance designers who are overwhelmed with client work.")</p>
+                            <textarea id="target_audience" name="target_audience" rows="3" required class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring-brand-blue sm:text-sm p-3"></textarea>
+                        </div>
+                        
+                        <div>
+                            <label for="problem_to_solve" class="block text-sm font-medium text-gray-700">What is their biggest headache?</label>
+                            <p class="text-sm text-gray-500">What specific problem, frustration, or pain point are we solving for them?</p>
+                            <textarea id="problem_to_solve" name="problem_to_solve" rows="3" required class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring-brand-blue sm:text-sm p-3"></textarea>
+                        </div>
+                        
+                        <div>
+                            <label for="core_features" class="block text-sm font-medium text-gray-700">What's the "magic"?</label>
+                            <p class="text-sm text-gray-500">List the 3-5 "must-have" features that make your solution special. (e.g., "1. User login, 2. AI-powered dashboard, 3. Automated invoicing")</p>
+                            <textarea id="core_features" name="core_features" rows="4" required class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring-brand-blue sm:text-sm p-3"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 
+                  STEP 3: THE VIBE
+                -->
+                <section data-step="3" class="bg-white shadow-xl rounded-lg p-8 sm:p-12 hidden">
+                    <h2 class="font-serif text-3xl font-bold text-gray-900">
+                        Step 3: The Vibe ✨
+                    </h2>
+                    <p class="mt-3 text-base text-gray-500">
+                        Now for the fun part. How should this project look and feel?
+                    </p>
+                    <div class="mt-8 space-y-8">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700">Describe your brand's personality (Select all that apply)</label>
+                            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <label class="flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-4 py-3 shadow-sm hover:bg-gray-50 cursor-pointer">
+                                    <input type="checkbox" name="vibe" value="Modern & Minimal" class="h-4 w-4 rounded border-gray-300 text-brand-blue focus:ring-brand-blue">
+                                    <span class="font-medium text-gray-700">Modern & Minimal</span>
+                                </label>
+                                <label class="flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-4 py-3 shadow-sm hover:bg-gray-50 cursor-pointer">
+                                    <input type="checkbox" name="vibe" value="Playful & Creative" class="h-4 w-4 rounded border-gray-300 text-brand-blue focus:ring-brand-blue">
+                                    <span class="font-medium text-gray-700">Playful & Creative</span>
+                                </label>
+                                <label class="flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-4 py-3 shadow-sm hover:bg-gray-50 cursor-pointer">
+                                    <input type="checkbox" name="vibe" value="Corporate & Professional" class="h-4 w-4 rounded border-gray-300 text-brand-blue focus:ring-brand-blue">
+                                    <span class="font-medium text-gray-700">Corporate & Professional</span>
+                                </label>
+                                <label class="flex items-center space-x-3 rounded-lg border border-gray-300 bg-white px-4 py-3 shadow-sm hover:bg-gray-50 cursor-pointer">
+                                    <input type="checkbox" name="vibe" value="Elegant & Sophisticated" class="h-4 w-4 rounded border-gray-300 text-brand-blue focus:ring-brand-blue">
+                                    <span class="font-medium text-gray-700">Elegant & Sophisticated</span>
+                                </label>
+                            </div>
+                            <input type="text" name="vibe_other" placeholder="Or describe your vibe here..." class="mt-4 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring-brand-blue sm:text-sm p-3">
+                        </div>
+
+                        <div>
+                            <label for="inspiration_links" class="block text-sm font-medium text-gray-700">Show me what you love</label>
+                            <p class="text-sm text-gray-500">Paste links to any websites, apps, or competitors that inspire you. (1 link per line)</p>
+                            <textarea id="inspiration_links" name="inspiration_links" rows="3" class="mt-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-brand-blue focus:ring-brand-blue sm:text-sm p-3"></textarea>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Navigation / Submit -->
+            <div class="mt-10 flex items-center justify-between">
+                <button type="button" id="backBtn" class="inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold text-gray-700 border border-gray-300 bg-white shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 disabled:opacity-40 disabled:cursor-not-allowed">
+                    ← Back
+                </button>
+                <div class="flex gap-3">
+                    <button type="button" id="nextBtn" class="inline-flex items-center rounded-lg bg-gray-900 px-8 py-3 text-sm font-semibold text-white shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2 transition-all">
+                        Next →
+                    </button>
+                    <button type="submit" id="submitBtn" class="hidden inline-flex items-center rounded-lg border border-transparent bg-gradient-to-r from-brand-blue to-brand-green px-10 py-3 text-sm font-semibold text-gray-900 shadow-lg hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2 transition-all">
+                        Send My Vision!
+                    </button>
+                </div>
+            </div>
+            <p class="mt-4 text-center text-sm text-gray-500">I'll review your answers and get back to you within 24 hours.</p>
+        </form>
+    </div>
+
+    <!-- Enhancement Script: steps, validation, autosave, progress -->
+    <script>
+      (function() {
+        const form = document.getElementById('intakeForm');
+        const steps = Array.from(document.querySelectorAll('[data-step]'));
+        const backBtn = document.getElementById('backBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const submitBtn = document.getElementById('submitBtn');
+        const progressBar = document.getElementById('progressBar');
+        const STORAGE_KEY = 'intakeForm.autosave.v1';
+
+        let current = 0;
+
+        function showStep(i) {
+          steps.forEach((sec, idx) => {
+            sec.classList.toggle('hidden', idx !== i);
+          });
+          backBtn.disabled = i === 0;
+          nextBtn.classList.toggle('hidden', i === steps.length - 1);
+          submitBtn.classList.toggle('hidden', i !== steps.length - 1);
+          const pct = ((i + 1) / steps.length) * 100;
+          progressBar.style.width = pct + '%';
+        }
+
+        function fieldsInStep(i) {
+          return steps[i].querySelectorAll('input, textarea, select');
+        }
+
+        function validateStep(i) {
+          const elements = Array.from(fieldsInStep(i));
+          for (const el of elements) {
+            if (el.hasAttribute('required') && !el.value.trim()) {
+              el.reportValidity();
+              el.focus();
+              return false;
+            }
+          }
+          return true;
+        }
+
+        // Autosave
+        function save() {
+          const data = Object.fromEntries(new FormData(form).entries());
+          try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); } catch(e) {}
+        }
+        function restore() {
+          try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            if (!raw) return;
+            const data = JSON.parse(raw);
+            Object.entries(data).forEach(([k, v]) => {
+              const el = form.elements.namedItem(k);
+              if (!el) return;
+              if (el instanceof RadioNodeList) {
+                Array.from(el).forEach(input => {
+                  if (input.type === 'checkbox') {
+                    input.checked = Array.isArray(v) ? v.includes(input.value) : v === input.value;
+                  } else if (input.type === 'radio') {
+                    input.checked = input.value === v;
+                  }
+                });
+              } else if (el.type === 'checkbox') {
+                el.checked = !!v;
+              } else {
+                el.value = v;
+              }
+            });
+          } catch(e) {}
+        }
+
+        form.addEventListener('input', save);
+        form.addEventListener('change', save);
+
+        // Navigation
+        backBtn.addEventListener('click', () => {
+          if (current > 0) { current -= 1; showStep(current); }
+        });
+        nextBtn.addEventListener('click', () => {
+          if (!validateStep(current)) return;
+          if (current < steps.length - 1) { current += 1; showStep(current); }
+        });
+
+        // Handle native validity on submit
+        form.addEventListener('submit', (e) => {
+          if (!validateStep(current)) {
+            e.preventDefault();
+            return;
+          }
+          // Optional: clear autosave on successful submit
+          try { localStorage.removeItem(STORAGE_KEY); } catch(e) {}
+        });
+
+        // Show client-side success notice if redirected back with ?success
+        const url = new URL(window.location);
+        if (url.searchParams.get('success')) {
+          const wrap = document.createElement('div');
+          wrap.className = 'container mx-auto max-w-2xl px-4';
+          wrap.innerHTML = `
+            <div class="mb-6 rounded-lg border border-green-200 bg-green-50 p-4 text-green-900">
+              <p class="font-semibold">Thanks! Your intake has been received.</p>
+              <p class="text-sm">I'll follow up within 24 hours. You can close this tab now.</p>
+            </div>`;
+          document.body.prepend(wrap);
+        }
+
+        // Init
+        restore();
+        showStep(current);
+      })();
+    </script>
+
+</body>
+</html>

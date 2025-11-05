@@ -1,0 +1,284 @@
+### 4. `31_B2B_LP_Specs.md`
+
+(Copy all the text below this line and save it as `31_B2B_LP_Specs.md`)
+
+```md
+### Product Requirements Document: AgentSphere Landing Page
+
+#### Executive Overview
+
+* **Product:** AgentSphere: Autonomous AI Agent Platform
+* **Purpose:** Convert solopreneurs and small business owners (like our "Alex Chen" avatar) by demonstrating a clear, no-code path to automating and monetizing their digital projects. The page must build trust, showcase the "mission control" value prop, and drive signups for a free trial.
+
+---
+
+#### Page Architecture & UI Components
+
+**1. Navigation Bar**
+
+* **Requirements:**
+    * **Position:** Fixed/sticky header, remains visible on scroll.
+    * **Components:**
+        * Logo (left-aligned, clickable to home).
+        * Primary navigation links: `Features`, `Use Cases`, `Pricing`, `Blog`.
+        * Secondary actions: `Start Free Trial` (primary CTA button), `Sign In` (text link).
+    * **Behavior:**
+        * Desktop: Horizontal navigation.
+        * Mobile: Hamburger menu with slide-out drawer.
+        * Transparent on hero, solid background (`Midnight Blue`) after scroll.
+    * **Specifications:**
+        * Height: 72px desktop, 60px mobile.
+        * Max-width: 1400px, centered.
+        * Z-index: 1000.
+
+**2. Hero Section**
+
+* **Requirements:**
+    * **Layout:** Two-column split (55/45) - Copy left, Visual right.
+    * **Copy Structure:**
+        * **Pre-headline:** Small text badge (pill-shaped). Example: "Trusted by 1,000+ Solopreneurs & Creators".
+        * **Headline (H1):** `Stop Being the Bottleneck. Start Being the Architect.`
+        * **Subheadline:** `AgentSphere is a no-code platform for building, deploying, and managing a "digital workforce" of AI agents. Automate your Etsy store, your content channels, and your social media from one dashboard.`
+        * **Trust Indicators:** Logo bar: `Shopify`, `Etsy`, `Pinterest`, `YouTube`, `OpenAI`. Grayscale with hover color.
+        * **Dual CTA Strategy:**
+            * Primary: `Start Your Free Trial` (high-contrast button, `MagicUI` Shiny Button).
+            * Secondary: `Watch 2-min Demo` (outline/ghost button).
+        * **Micro-copy:** "14-day free trial • No credit card required • Cancel anytime".
+    * **Visual Component:**
+        * **Type:** Animated product screenshot of the "Monetization Dashboard".
+        * **Requirements:** Shows agent status (active, pending), real-time revenue graphs, and the "Project Pipeline Manager". Subtle loop (15-20 sec) showing tasks completing.
+        * **Technical:** `MagicUI` Blur-In on load.
+
+**3. Problem/Pain Point Section**
+
+* **Requirements:**
+    * **Purpose:** Resonate deeply with the "Problem Aware" (Alex) and "Unaware" (Sarah) avatars.
+    * **Headline (H2):** `Are You Drowning in Digital 'Busywork'?`
+    * **Problem Statements:** 3-column grid (CSS Grid).
+        * **Column 1: "Stagnant Growth"**
+            * Icon: `[Icon of a trapped brain/idea]`
+            * Text: "Your best ideas (Etsy stores, YouTube channels, blogs) are trapped in your notebook because you're swamped with manual uploads, scheduling, and admin."
+        * **Column 2: "Tool Overload"**
+            * Icon: `[Icon of tangled wires/apps]`
+            * Text: "You're paying for 5+ different tools (Zapier, Make, Schedulers, AI writers) that don't talk to each other, creating a 'spaghetti' workflow that breaks."
+        * **Column 3: "No Clear ROI"**
+            * Icon: `[Icon of a question mark on a graph]`
+            * Text: "You're 'automating' with Zaps, but have no idea if your efforts are actually saving time or making you money. You're flying blind."
+    * **Supporting Stat:** "The average solopreneur spends 20+ hours per week on non-billable admin tasks. - *Solopreneur Today*"
+    * **Technical:** Contrasting background (`Light Gray`).
+
+**4. Solution Positioning Section**
+
+* **Requirements:**
+    * **Purpose:** Introduce AgentSphere as the "mission control" Alex was looking for.
+    * **Headline (H2):** `One Dashboard to Build, Manage, and Monetize Your Digital Workforce.`
+    * **Solution Narrative:**
+        * "Stop gluing tools together. AgentSphere isn't *another* tool—it's your new digital team. We provide a single 'mission control' where you can build, deploy, and monitor autonomous AI agents to run your business *for* you."
+        * "From your 'Agent Builder,' you give simple English commands. The agent executes the entire workflow. On your 'Monetization Dashboard,' you watch the ROI in real-time."
+    * **Visual Proof:**
+        * A "Before" vs. "After" diagram.
+        * **Before:** A chaotic diagram showing icons for `Zapier`, `Sheets`, `Etsy`, `Pinterest`, `OpenAI`, all connected with tangled red arrows. Labeled "Spaghetti Automation."
+        * **After:** Icons for `Etsy`, `Pinterest`, `OpenAI` all connecting to a central `AgentSphere` logo, which outputs to a clean graph. Labeled "Agent-Led Automation."
+
+**5. Features & Benefits Section**
+
+* **Requirements:**
+    * **Structure:** Alternating layout (image-text) for our 3 core features.
+    * **Feature 1: No-Code "Agent Builder"**
+        * **Text (left):** (H3) `Build Agents in Plain English.` (Desc) "Stop fighting with APIs and webhooks. Our builder lets you define complex workflows with simple commands. 'When a file is added to this folder, use AI to write a title, 5 tags, and a description. Then, create a new draft listing on Etsy.'"
+        * **Visual (right):** Screenshot of the Agent Builder UI, showing the text prompt and the resulting "workflow" blocks.
+    * **Feature 2: Unified "Monetization Dashboard"**
+        * **Text (right):** (H3) `Track Your ROI, Not Just Your Tasks.` (Desc) "Finally, a single source of truth. See exactly how much revenue each agent is generating, what its costs are (e.g., API credits), and its real-time profitability. Know what's working, instantly."
+        * **Visual (left):** Close-up screenshot of the dashboard widgets, showing `[Agent: EtsyBot | Revenue: $1,450 | Cost: $42 | ROI: 3,450%]`.
+    * **Feature 3: Project Pipeline Manager**
+        * **Text (left):** (H3) `Automate, then Approve.` (Desc) "Put your approval on autopilot. Have agents generate 100 blog post ideas or 50 t-shirt designs and send them to your 'Pending' pipeline. You just click 'Approve' to deploy, or 'Reject' to discard."
+        * **Visual (right):** Screenshot of the Kanban-style "Project Pipeline Manager" with cards for "Pending," "Approved," and "Rejected."
+
+**6. ROI Calculator Section**
+
+* **Requirements:**
+    * **Purpose:** Provide a tangible "Aha!" moment for the "Problem Aware" avatar.
+    * **Headline:** `How Much Time and Revenue Are You Leaving on the Table?`
+    * **Input Fields:**
+        * `Hours spent on manual tasks per week` (Slider: 0-40)
+        * `Your estimated hourly rate` (Input: $XX)
+        * `New projects you *haven't* launched` (Slider: 0-10)
+    * **Calculation Logic:**
+        * `Time Saved per Year` = (Hours/week * 52) * 0.8 (80% saved)
+        * `Value of Time Saved` = (Time Saved) * (Hourly Rate)
+        * `Estimated New Revenue` = (New Projects * $1,500/mo) * 12 (based on avatar desire)
+    * **Output Display:**
+        * Large Number: `Estimated Annual Value: $XX,XXX`
+        * Breakdown: "Time Savings: $X,XXX" + "New Revenue: $XX,XXX"
+    * **CTA:** `Start Your Trial & Claim This Value`
+
+**7. Social Proof / Case Study Section**
+
+* **Requirements:**
+    * **Structure:** Featured case study + 3-column testimonial grid.
+    * **Primary Case Study Component:**
+        * **Layout:** Full-width feature with logo, quote, and metrics.
+        * **Avatar:** `Alex Chen, Designer & E-commerce Owner`
+        * **Key Results:** `30+ Hours/Week Saved` | `5 New Automated Stores` | `$4,200+ New Monthly Revenue`
+        * **Quote:** `"I'm not a digital janitor anymore. I'm an architect. My business is finally growing while I sleep, and I'm free to do what I actually love—create."`
+    * **Supporting Testimonials (Grid):**
+        * **Card 1 (Sarah):** "I finally feel like a real professional. AgentSphere automates all my Pinterest and blog posts. It's the partner I always needed." - *Sarah J., Food Blogger*
+        * **Card 2 (David):** "This is a scaling machine. I launched 10 test stores in one weekend. The dashboard shows me which ones are winners. Insane." - *David, E-com Grinder*
+        * **Card 3 (Maria):** "I automated my entire client reporting process. It saves my agency 40 hours a month. It's a no-brainer." - *Maria G., Agency Owner*
+
+**8. Pricing Section**
+
+* **Requirements:**
+    * **Structure:** 3-tier pricing table. Monthly/Annual toggle.
+    * **Tier 1: `Hobbyist`** (For Sarah)
+        * `$19/mo`
+        * `3 Agents` | `5,000 Tasks/mo`
+        * Core Features, Standard Integrations
+        * CTA: `Start Free Trial`
+    * **Tier 2: `Solopreneur`** (For Alex)
+        * `$49/mo` - **(Highlighted "Most Popular")**
+        * `15 Agents` | `25,000 Tasks/mo`
+        * Everything in Hobbyist + `Project Pipeline`
+        * CTA: `Start Free Trial` (Primary Button Style)
+    * **Tier 3: `Agency`** (For Maria)
+        * `$149/mo`
+        * `Unlimited Agents` | `100,000 Tasks/mo`
+        * Team Members, Client Dashboards, Priority Support
+        * CTA: `Start Free Trial`
+    * **FAQ Micro-Section:** "Can I change plans?" "What counts as a 'task'?" "What's included in the trial?"
+
+**9. Integration & Security Section**
+
+* **Requirements:**
+    * **Structure:** Two sub-sections side by side.
+    * **Integrations Component:**
+        * **Headline:** `Connects With the Tools You Already Use`
+        * **Logo Grid:** `Shopify`, `Etsy`, `Pinterest`, `YouTube`, `Instagram`, `Google Drive`, `Notion`, `Slack`, `OpenAI`, `Midjourney`, `ElevenLabs`, `WooCommerce`.
+        * **CTA:** `View All Integrations`
+    * **Security & Compliance Component:**
+        * **Headline:** `Pro-Grade Security & Reliability`
+        * **Badges:** `SOC 2 Type II`, `GDPR Compliant`
+        * **Feature List:** `Secure API Key Storage (Encrypted)`, `256-bit Encryption`, `99.9% Uptime`, `Role-Based Access Control` (for Agency plan).
+        * **Link:** `View Security Documentation`
+
+**10. Demo/Video Section**
+
+* **Requirements:**
+    * **Headline:** `See AgentSphere in Action (in 2 Minutes)`
+    * **Video Player:** Embedded video (Vimeo).
+    * **Content:** A 2-minute walkthrough showing the *exact* "Alex Chen" workflow: `[File Drag-and-Drop]` -> `[Agent Builder UI]` -> `[Etsy Listing Appears]` -> `[Monetization Dashboard Updates]`.
+    * **Secondary CTA:** `Ready to build yours? Start Your Free Trial.`
+
+**11. Final CTA Section**
+
+* **Requirements:**
+    * **Headline:** `Ready to Stop 'Doing' and Start 'Directing'?`
+    * **Supporting Text:** "Join 1,000+ solopreneurs, creators, and agencies using AgentSphere to automate their work and scale their ideas. Start your 14-day free trial today."
+    * **Dual CTAs:**
+        * Primary: `Start Free Trial` (Large button).
+        * Secondary: `Watch 2-min Demo` (Outline button).
+    * **Trust Elements:** "14-day trial" "No credit card required" "Cancel anytime"
+    * **Visual Design:** Full-width section using the primary brand gradient: `linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)`.
+
+**12. Footer**
+
+* **Requirements:**
+    * **Structure:** 4-column layout.
+    * **Column 1: Company:** Logo, Tagline, Social Icons.
+    * **Column 2: Platform:** `Features`, `Integrations`, `Pricing`, `Security`.
+    * **Column 3: Use Cases:** `For E-commerce`, `For Content Creators`, `For Bloggers`, `For Agencies`.
+    * **Column 4: Resources:** `Blog`, `Help Center`, `API Documentation`, `Contact`.
+    * **Legal:** (Below columns) Copyright, `Privacy Policy`, `Terms of Service`.
+
+---
+
+#### Visual Style Guide
+*(This section is populated **directly** from our `2_brand.md` document)*
+
+**Color Palette**
+
+* **Primary Brand Colors:**
+    * Gradient: `linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)`
+    * `#00C9FF` (Deep Sky Blue)
+    * `#20D4F5` (Cyan)
+    * `#40E0EC` (Turquoise)
+    * `#60EBE2` (Aqua)
+    * `#80F7D9` (Mint)
+    * `#92FE9D` (Spring Green)
+* **Neutral Colors:**
+    * `#0E1a35` (Midnight Blue - Dark Backgrounds, Primary Text)
+    * `#8A94A6` (Medium Gray - Secondary Text)
+    * `#F3F4F6` (Light Gray - Backgrounds)
+    * `#FFFFFF` (White - Primary Backgrounds)
+    * `#111827` (Black - Dark Mode Text)
+* **Semantic Colors:**
+    * Success: `#22C55E`
+    * Warning: `#F59E0B`
+    * Error: `#EF4444`
+    * Info: `#3B82F6`
+
+**Typography**
+
+* **Font Families:**
+    * Headings (H1, H2, H3): `DM Serif Display`, serif
+    * Body & UI (H4-H6, Body, Small): `Inter`, sans-serif
+* **Type Scale:**
+| Element | rem | px | line-height | Font |
+| :--- | :--- | :--- | :--- | :--- |
+| **Display** | 4.5rem | 72px | 1.1 | `DM Serif Display` |
+| **H1** | 3rem | 48px | 1.2 | `DM Serif Display` |
+| **H2** | 2.25rem | 36px | 1.25 | `DM Serif Display` |
+| **H3** | 1.875rem | 30px | 1.3 | `DM Serif Display` |
+| **H4** | 1.5rem | 24px | 1.4 | `Inter` |
+| **H5** | 1.25rem | 20px | 1.5 | `Inter` |
+| **H6** | 1.125rem | 18px | 1.5 | `Inter` |
+| **Body (Regular)** | 1rem | 16px | 1.6 | `Inter` |
+| **Body (Small)** | 0.875rem | 14px | 1.5 | `Inter` |
+| **Body (XSmall)**| 0.75rem | 12px | 1.4 | `Inter` |
+* **Font Weights:** `Inter` (300, 400, 500, 600), `DM Serif Display` (400, 700 - if available, else 400)
+
+**Spacing System**
+
+* Base Unit: 8px
+* Scale: `0.25rem` (4px), `0.5rem` (8px), `1rem` (16px), `1.5rem` (24px), `2rem` (32px), `3rem` (48px), `4rem` (64px).
+* Section Padding: `5rem` (80px) top/bottom.
+
+**Component Styles**
+
+* **Buttons:**
+    * Primary: Background (Brand Gradient), Text (White), `border-radius: 1rem` (from `2_brand.md`), Padding: `16px 32px`, font-weight: 600.
+    * Secondary: Background (Transparent), Border: `2px solid #00C9FF`, Text (`#00C9FF`), `border-radius: 1rem`.
+* **Cards:**
+    * Background: White (light), `#0E1a35` (dark).
+    * Border: `1px solid #F3F4F6` (light), `#111827` (dark).
+    * `border-radius: 1rem` (from `2_brand.md`).
+    * Box-shadow: `0 4px 12px rgba(0,0,0,0.05)`.
+* **Input Fields:**
+    * Height: 48px, `border-radius: 0.5rem`, Border: `1px solid #F3F4F6`.
+    * Focus: Border color `(Deep Sky Blue, #00C9FF)`.
+
+**Iconography:**
+
+* **Style:** `Heroicons` (Line, 2px stroke width).
+* **Size:** 24px standard, 32px for feature icons.
+
+**Animation & Interactions**
+
+* **Libraries:** `Framer Motion` (complex), `MagicUI` (hero/marketing).
+* **Scroll Animations:** `MagicUI` `Blur-In` on section load.
+* **Button Hover:** `MagicUI` `Shiny Button` effect for primary CTAs.
+
+**Responsive Breakpoints**
+
+* `sm`: 640px
+* `md`: 768px (Tablet - stack features)
+* `lg`: 1024px (Desktop)
+* `xl`: 1280px (Container max-width 1200px)
+* `2xl`: 1536px (Container max-width 1400px)
+
+**Technical Requirements**
+
+* **Performance:** Lighthouse > 90. Lazy load images (`WebP`) and video.
+* **Code Architecture:** React/Next.js, Tailwind CSS, DaisyUI.
+* **Accessibility:** WCAG 2.1 AA. All `Inter` text must pass contrast ratios. `DM Serif Display` is for large headlines only.
+* **Analytics:** Event tracking for "Start Free Trial" clicks, "Demo" clicks, and "ROI Calculator" submissions.

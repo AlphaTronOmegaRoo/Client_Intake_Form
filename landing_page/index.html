@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgentSphere - Stop Being the Bottleneck</title>
+
+    <meta name="description" content="AgentSphere is a no-code platform to build, deploy, and manage a digital workforce of AI agents from one dashboard.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <meta property="og:title" content="AgentSphere - Stop Being the Bottleneck">
+    <meta property="og:description" content="Build, deploy, and manage a digital workforce of AI agents. Start your free trial.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=1200&q=80&auto=format&fit=crop">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AgentSphere - Stop Being the Bottleneck">
+    <meta name="twitter:description" content="Build, deploy, and manage a digital workforce of AI agents. Start your free trial.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Neutral Colors
+            'midnight-blue': '#0E1a35',
+            'medium-gray': '#8A94A6',
+            'light-gray': '#F3F4F6',
+            // Primary Brand Colors
+            'deep-sky-blue': '#00C9FF',
+            'spring-green': '#92FE9D',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'sans-serif'],
+            'serif': ['DM Serif Display', 'serif'],
+          },
+          borderRadius: {
+            'xl': '1rem',
+          }
+        }
+      }
+    }
+    </script>
+
+    <style>
+      .blob {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(40px);
+        opacity: 0.45;
+        mix-blend-mode: screen;
+        animation: float 12s ease-in-out infinite;
+        will-change: transform;
+      }
+      .blob-1 { width: 28rem; height: 28rem; background: radial-gradient(circle at 30% 30%, #00C9FF, rgba(0,201,255,0.2)); top: -6rem; left: -4rem; }
+      .blob-2 { width: 32rem; height: 32rem; background: radial-gradient(circle at 70% 70%, #92FE9D, rgba(146,254,157,0.2)); bottom: -8rem; right: -6rem; animation-delay: -3s; }
+      .blob-3 { width: 24rem; height: 24rem; background: radial-gradient(circle at 50% 50%, #7dd3fc, rgba(125,211,252,0.2)); top: 40%; right: 10%; animation-delay: -6s; }
+      @keyframes float {
+        0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+        50% { transform: translate3d(0, -10px, 0) scale(1.05); }
+      }
+      .glass {
+        backdrop-filter: saturate(150%) blur(8px);
+        background: rgba(255, 255, 255, 0.6);
+      }
+    </style>
+</head>
+<body class="font-sans bg-white text-midnight-blue antialiased">
+
+    <div class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <div class="relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                
+                <header class="pt-6 md:pt-10">
+                    <nav class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="font-serif text-2xl font-bold text-midnight-blue">AgentSphere</span>
+                        </div>
+                        <div class="hidden md:flex items-center space-x-6">
+                            <a href="#demo" class="font-medium text-medium-gray hover:text-midnight-blue">Features</a>
+                            <a href="#pricing" class="font-medium text-medium-gray hover:text-midnight-blue">Pricing</a>
+                            <a href="#" class="font-medium text-medium-gray hover:text-midnight-blue">Sign In</a>
+                            <a href="#pricing" class="px-5 py-2 rounded-xl text-white font-semibold bg-gradient-to-r from-deep-sky-blue to-spring-green hover:opacity-90 transition-opacity">
+                                Start Free Trial
+                            </a>
+                        </div>
+                    </nav>
+                </header>
+
+                <main class="mt-10 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28" data-aos="fade-up">
+                    <div class="text-center lg:text-left glass rounded-2xl p-6 sm:p-8 shadow-xl">
+                        <h1 class="text-4xl tracking-tight font-extrabold text-midnight-blue sm:text-5xl md:text-6xl">
+                            <span class="block font-serif xl:inline">Stop Being the Bottleneck.</span>
+                            <span class="block font-serif text-deep-sky-blue xl:inline">Start Being the Architect.</span>
+                        </h1>
+                        <p class="mt-3 text-base text-midnight-blue/80 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            AgentSphere is a no-code platform for building, deploying, and managing a "digital workforce" of AI agents. Automate your Etsy store, your content channels, and your social media from one dashboard.
+                        </p>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-xl shadow">
+                                <a href="#pricing" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-gradient-to-r from-deep-sky-blue to-spring-green hover:opacity-90 md:py-4 md:text-lg md:px-10">
+                                    Start Your Free Trial
+                                </a>
+                            </div>
+                            <div class="mt-3 sm:mt-0 sm:ml-3">
+                                <a href="#demo" class="w-full flex items-center justify-center px-8 py-3 border-2 border-deep-sky-blue text-base font-medium rounded-xl text-deep-sky-blue bg-white hover:bg-light-gray md:py-4 md:text-lg md:px-10">
+                                    Watch 2-min Demo
+                                </a>
+                            </div>
+                        </div>
+                        <p class="mt-3 text-sm text-medium-gray">14-day free trial • No credit card required • Cancel anytime</p>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjUyOXwwfDF8c2VhcmNofDF8fGRhc2hib2FyZHxlbnwwfHx8fDE3MzEwMDc0Njh8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="AgentSphere Dashboard Analytics">
+        </div>
+    </div>
+
+    <section class="py-20 bg-light-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center">
+                <h2 class="text-4xl font-serif font-bold text-midnight-blue sm:text-5xl">
+                    Are You Drowning in Digital 'Busywork'?
+                </h2>
+                <p class="mt-4 text-xl text-medium-gray">
+                    You have great ideas, but you're trapped doing the manual work.
+                </p>
+            </div>
+
+            <div class="mt-16 grid gap-10 md:grid-cols-3">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-serif font-semibold text-midnight-blue">Stagnant Growth</h3>
+                    <p class="mt-3 text-base text-medium-gray">
+                        Your best ideas (Etsy stores, YouTube channels) are trapped in your notebook because you're swamped with manual uploads, scheduling, and admin.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-serif font-semibold text-midnight-blue">Tool Overload</h3>
+                    <p class="mt-3 text-base text-medium-gray">
+                        You're paying for 5+ tools that don't talk to each other, creating a 'spaghetti' workflow that breaks and costs you time.
+                    </p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-serif font-semibold text-midnight-blue">No Clear ROI</h3>
+                    <p class="mt-3 text-base text-medium-gray">
+                        You're 'automating' with Zaps, but have no idea if your efforts are actually saving time or making you money. You're flying blind.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-24 text-center">
+                <h2 class="text-4xl font-serif font-bold text-midnight-blue sm:text-5xl">
+                    One Dashboard to Build, Manage, and Monetize.
+                </h2>
+                <p class="mt-4 text-xl text-medium-gray max-w-3xl mx-auto">
+                    Stop gluing tools together. AgentSphere isn't *another* tool—it's your new digital team. We provide a single 'mission control' where you build, deploy, and monitor autonomous AI agents to run your business *for* you.
+                </p>
+                <div class="mt-12 h-64 bg-white rounded-xl shadow-xl overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjUyOXwwfDF8c2VhcmNofDE4fHx3b3JrZmxvd3xlbnwwfHx8fDE3MzEwMDc0Njh8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Streamlined AgentSphere Workflow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif font-bold text-midnight-blue sm:text-5xl">
+                    Your "Digital Workforce" Awaits
+                </h2>
+                <p class="mt-4 text-xl text-medium-gray">
+                    Three core features to turn your ideas into automated revenue.
+                </p>
+            </div>
+
+            <div class="grid gap-12 items-center md:grid-cols-2">
+                <div>
+                    <h3 class="text-3xl font-serif font-semibold text-midnight-blue">No-Code "Agent Builder"</h3>
+                    <p class="mt-4 text-lg text-medium-gray">
+                        Stop fighting with APIs and webhooks. Our builder lets you define complex workflows with simple commands. "When a file is added to this folder, use AI to write a title, 5 tags, and a description. Then, create a new draft listing on Etsy."
+                    </p>
+                </div>
+                <div class="h-80 bg-light-gray rounded-xl shadow-lg overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjUyOXwwfDF8c2VhcmNofDE2fHxjb2RlfGVufDB8fHx8MTczExNjA0MzB8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="AgentSphere Agent Builder">
+                </div>
+            </div>
+
+            <div class="grid gap-12 items-center md:grid-cols-2 mt-20">
+                <div class="h-80 bg-light-gray rounded-xl shadow-lg overflow-hidden md:order-last">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1605379399642-870262d3d051?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjUyOXwwfDF8c2VhcmNofDV8fGRldmVsb3BlcnxlbnwwfHx8fDE3MzEwMDc2ODB8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="AgentSphere Mission Control">
+                </div>
+                <div class="md:order-first">
+                    <h3 class="text-3xl font-serif font-semibold text-midnight-blue">Unified "Monetization Dashboard"</h3>
+                    <p class="mt-4 text-lg text-medium-gray">
+                        Finally, a single source of truth. See exactly how much revenue each agent is generating, what its costs are (e.g., API credits), and its real-time profitability. Know what's working, instantly.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid gap-12 items-center md:grid-cols-2 mt-20">
+                <div>
+                    <h3 class="text-3xl font-serif font-semibold text-midnight-blue">Project Pipeline Manager</h3>
+                    <p class="mt-4 text-lg text-medium-gray">
+                        Put your approval on autopilot. Have agents generate 100 blog post ideas or 50 t-shirt designs and send them to your 'Pending' pipeline. You just click 'Approve' to deploy, or 'Reject' to discard.
+                    </p>
+                </div>
+                <div class="h-80 bg-light-gray rounded-xl shadow-lg overflow-hidden">
+                    <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNjUyOXwwfDF8c2VhcmNofDEyfHxwcm9qZWN0JTIwbWFuYWdlbWVudHxlbnwwfHx8fDE3MzEwMDc3MzR8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="AgentSphere Project Pipeline">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 bg-white" id="testimonials">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <h2 class="text-4xl font-serif font-bold text-midnight-blue sm:text-5xl">Loved by builders like you</h2>
+                <p class="mt-4 text-xl text-medium-gray">Creators, solo-founders, and agencies use AgentSphere to ship faster.</p>
+            </div>
+            <div class="grid gap-8 md:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-light-gray/60">
+                    <p class="text-midnight-blue/90">“We automated listing drafts for our Etsy store. What took hours weekly now takes minutes.”</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <img class="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?w=200&q=80&auto=format&fit=crop" alt="avatar">
+                        <div>
+                            <p class="font-semibold">Alex Rivera</p>
+                            <p class="text-sm text-medium-gray">E-commerce Seller</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-light-gray/60">
+                    <p class="text-midnight-blue/90">“Our content pipeline runs on autopilot with approvals. Clear ROI on day one.”</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <img class="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=200&q=80&auto=format&fit=crop" alt="avatar">
+                        <div>
+                            <p class="font-semibold">Morgan Lee</p>
+                            <p class="text-sm text-medium-gray">Content Studio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-8 border border-light-gray/60">
+                    <p class="text-midnight-blue/90">“Replaced 6 different tools. One dashboard, finally.”</p>
+                    <div class="mt-6 flex items-center gap-3">
+                        <img class="h-10 w-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=200&q=80&auto=format&fit=crop" alt="avatar">
+                        <div>
+                            <p class="font-semibold">Jamie Patel</p>
+                            <p class="text-sm text-medium-gray">Agency Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white" id="demo" data-aos="fade-up">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-serif font-bold text-midnight-blue sm:text-5xl">See AgentSphere in Action</h2>
+            <div class="mt-12 aspect-video w-full rounded-xl shadow-2xl overflow-hidden bg-black">
+                <video
+                  class="w-full h-full"
+                  controls
+                  playsinline
+                  preload="metadata"
+                  controlslist="nodownload"
+                >
+                  <source src="agentsphere.mp4.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="mt-10">
+                <a href="#pricing" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-gradient-to-r from-deep-sky-blue to-spring-green hover:opacity-90 md:py-4 md:text-lg md:px-10">Ready to build yours? Start Your Free Trial.</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-light-gray" id="faq">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-4xl font-serif font-bold text-midnight-blue sm:text-5xl">Frequently Asked Questions</h2>
+                <p class="mt-4 text-xl text-medium-gray">Quick answers to common questions.</p>
+            </div>
+            <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+                <details class="group bg-white rounded-xl p-6 shadow border border-light-gray/60">
+                    <summary class="flex cursor-pointer list-none items-center justify-between">
+                        <span class="font-semibold text-midnight-blue">Do I need to code to use AgentSphere?</span>
+                        <span class="text-medium-gray group-open:rotate-180 transition-transform">▾</span>
+                    </summary>
+                    <p class="mt-3 text-medium-gray">No. Define workflows in plain language and configure integrations with guided steps.</p>
+                </details>
+                <details class="group bg-white rounded-xl p-6 shadow border border-light-gray/60">
+                    <summary class="flex cursor-pointer list-none items-center justify-between">
+                        <span class="font-semibold text-midnight-blue">Can I approve content before it goes live?</span>
+                        <span class="text-medium-gray group-open:rotate-180 transition-transform">▾</span>
+                    </summary>
+                    <p class="mt-3 text-medium-gray">Yes. Use the Project Pipeline to queue items for approval or auto-deploy after review.</p>
+                </details>
+                <details class="group bg-white rounded-xl p-6 shadow border border-light-gray/60">
+                    <summary class="flex cursor-pointer list-none items-center justify-between">
+                        <span class="font-semibold text-midnight-blue">What does the free trial include?</span>
+                        <span class="text-medium-gray group-open:rotate-180 transition-transform">▾</span>
+                    </summary>
+                    <p class="mt-3 text-medium-gray">Full access to all features for 14 days. No credit card required.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white" id="pricing">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <h2 class="text-4xl font-serif font-bold text-midnight-blue sm:text-5xl">Simple, transparent pricing</h2>
+                <p class="mt-4 text-xl text-medium-gray">Start free. Upgrade when you’re ready.</p>
+            </div>
+            <div class="grid gap-8 md:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+                <div class="rounded-2xl border border-light-gray/60 p-8 bg-white shadow-sm">
+                    <h3 class="text-2xl font-serif font-semibold">Starter</h3>
+                    <p class="mt-2 text-medium-gray">For getting started</p>
+                    <p class="mt-6 text-4xl font-bold">$0</p>
+                    <ul class="mt-6 space-y-2 text-midnight-blue/80 text-sm">
+                        <li>Up to 2 agents</li>
+                        <li>Basic workflows</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#" class="mt-8 inline-flex justify-center w-full px-6 py-3 rounded-xl bg-light-gray text-midnight-blue font-semibold">Get started</a>
+                </div>
+                <div class="rounded-2xl border border-deep-sky-blue p-8 bg-white shadow-lg relative">
+                    <span class="absolute -top-3 right-6 rounded-full bg-gradient-to-r from-deep-sky-blue to-spring-green px-3 py-1 text-xs font-bold text-white">POPULAR</span>
+                    <h3 class="text-2xl font-serif font-semibold">Pro</h3>
+                    <p class="mt-2 text-medium-gray">For growing teams</p>
+                    <p class="mt-6 text-4xl font-bold">$29<span class="text-base font-medium text-medium-gray">/mo</span></p>
+                    <ul class="mt-6 space-y-2 text-midnight-blue/80 text-sm">
+                        <li>Up to 10 agents</li>
+                        <li>Advanced workflows</li>
+                        <li>Integrations</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#" class="mt-8 inline-flex justify-center w-full px-6 py-3 rounded-xl bg-gradient-to-r from-deep-sky-blue to-spring-green text-white font-semibold">Start free trial</a>
+                </div>
+                <div class="rounded-2xl border border-light-gray/60 p-8 bg-white shadow-sm">
+                    <h3 class="text-2xl font-serif font-semibold">Business</h3>
+                    <p class="mt-2 text-medium-gray">For serious automation</p>
+                    <p class="mt-6 text-4xl font-bold">$99<span class="text-base font-medium text-medium-gray">/mo</span></p>
+                    <ul class="mt-6 space-y-2 text-midnight-blue/80 text-sm">
+                        <li>Unlimited agents</li>
+                        <li>Custom integrations</li>
+                        <li>Dedicated success manager</li>
+                    </ul>
+                    <a href="#" class="mt-8 inline-flex justify-center w-full px-6 py-3 rounded-xl bg-light-gray text-midnight-blue font-semibold">Contact sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-midnight-blue text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="font-serif text-lg font-semibold">Platform</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#demo" class="text-base text-medium-gray hover:text-white">Features</a></li>
+                        <li><a href="#pricing" class="text-base text-medium-gray hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="text-base text-medium-gray hover:text-white">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-semibold">Use Cases</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-base text-medium-gray hover:text-white">E-commerce</a></li>
+                        <li><a href="#" class="text-base text-medium-gray hover:text-white">Content Creators</a></li>
+                        <li><a href="#" class="text-base text-medium-gray hover:text-white">Agencies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-semibold">Resources</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-base text-medium-gray hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-base text-medium-gray hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-base text-medium-gray hover:text-white">API Docs</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-serif text-lg font-semibold">Company</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-base text-medium-gray hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-base text-medium-gray hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-base text-medium-gray">&copy; 2025 AgentSphere. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <span class="text-medium-gray">Socials</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({ once: true, duration: 700, offset: 80 });
+    </script>
+</body>
+</html>
